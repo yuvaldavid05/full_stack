@@ -1,0 +1,49 @@
+nav{
+    background-color: cornflowerblue;
+    margin: -8px -16px;
+}
+
+ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+
+li{
+    display:inline;
+    font-size: 18px;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    display:inline-block;
+    color: white;
+    padding:8px;
+}
+
+a:hover{
+    background-color: rgba(0, 0, 0, 0.219);
+}
+
+li>ul{
+position:absolute;
+background-color: blueviolet;
+right:0;
+width:100%;
+display:none;
+}
+
+li>ul a{
+    display:block;
+}
+
+li:hover>ul{
+    display:block;
+}
+
+
+li>ul>li ul {
+right:100%;
+top:0;
+}

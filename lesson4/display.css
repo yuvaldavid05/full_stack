@@ -1,0 +1,52 @@
+.rectangle{
+height: 50px;
+}
+
+
+.yellow {
+background-color:yellow ;
+}
+
+.green {
+background-color:green ;
+}
+
+.blue {
+background-color:blue ;
+}
+
+.red {
+background-color:red ;
+}
+
+.purple {
+background-color:purple ;
+
+}
+
+
+.rank .green{
+width: 80%;
+}
+
+.rank .blue{
+width: 70%
+}
+
+.rank .red{
+width: 60%
+}
+
+.rank .purple{
+width: 50%
+}
+
+
+.small .rectangle{
+    width: 30%;
+}
+
+.row .rectangle{
+    display: inline-block;
+    width: 19%;
+}

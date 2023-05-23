@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,500&display=swap');
+
+
+html{
+scroll-behavior: smooth;
+}
+
+
+body{
+  /* כיוון האתר מימין לשמאל */
+    direction: rtl;
+    /* שינוי גופן לאתר */
+    font-family: 'Rubik', sans-serif;
+    /* רקע */
+    background-color: darkslateblue;
+}
+h1{
+    /* יישור טקסט */
+    text-align: center;
+    /* צבע הטקסט */
+    color: white;
+}
+
+.frame{
+  /* רוחב */
+width: 80%;
+  /* מקסימום רוחב */
+max-width: 800px; 
+   /* מינימום גובה */
+min-height: 500px;
+   /* רקע */
+background-color: white;
+ /* ריווח חיצוני אוטומטי (גורם למרכוס האלמנט) */
+margin:auto;
+ /* ריווח פנימי של האלמנט */
+padding: 8px 16px;
+  /* עיגול קצוות */
+border-radius: 6px;
+
+}
+
+.dropdown div {
+    display: none;
+    width: 150px;
+}
+
+/* עיצוב כל הכפתורים בתפריט הנפתח */
+/*  */
+.dropdown div button {
+    display: block;
+    width: 100%;
+}
+
+.dropdown:hover div {
+    display: block;
+}

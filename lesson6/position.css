@@ -1,0 +1,110 @@
+h2 {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #c9f2e5;
+}
+
+
+
+
+.example1{
+    background-color: rgb(89, 201, 235);
+    color:white;
+    height:200px;
+    width:200px;
+    position: fixed;
+    top:200px;
+    left:0;
+    z-index: 2;
+    padding:10px;
+    font-size: 20px;
+    font-weight:bold;
+    border-radius: 8px;
+    box-shadow: 0 0 8px 18px;
+
+}
+
+example2{
+    text-align: center;
+}
+
+.rectangle{
+    background-color: rgb(221, 75, 111);
+    width:32%;
+    height:170px;
+    display: inline-block;
+    position:relative;
+}
+
+
+.rectangle div{
+    height: 50px;
+    width: 80px;
+    background-color: rgb(247, 247, 106);
+    position:absolute;
+}
+
+.rectangle:nth-child(2) div{
+    margin:auto;
+    left:0;
+    right:0;
+}
+
+.rectangle:nth-child(3) div{
+    margin:auto;
+    left: 0;
+}
+
+.rectangle:nth-child(4) div{
+    margin:auto;
+    top:0;
+    bottom:0;
+}
+
+.rectangle:nth-child(5) div{
+    margin:auto;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+}
+
+.rectangle:nth-child(6) div{
+    margin:auto;
+    left:0;
+    top:0;
+    bottom:0;
+}
+
+.rectangle:nth-child(7) div{
+    margin:auto;
+    bottom:0;
+}
+
+.rectangle:nth-child(8) div{
+    margin:auto;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.rectangle:nth-child(9) div{
+    margin:auto;
+    bottom:0;
+    left:0;
+}
+
+.rectangle div::after{
+    content: "Absolute";
+}
+
+
+.example3{
+    width: 400px;
+    height:200px;
+    background-color: rgb(250, 60, 60);
+    position: relative;
+    right: 50px;
+    top: 8px;
+}

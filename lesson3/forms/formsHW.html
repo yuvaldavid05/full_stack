@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>שיעורי בית טופס פיצה</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+
+<body>
+
+    <form class="frame" action="forms_datas.html">
+        <h1>פרטי ההזמנה</h1>
+        <fieldset>
+            <legend>פרטי משתמש:</legend>
+
+            <div class="field">
+                <label>שם פרטי</label>
+                <input type="text">
+            </div>
+
+            <div class="field">
+                <label>שם משפחה</label>
+                <input type="text">
+            </div>
+
+            <div class="field">
+                <label>טלפון</label>
+                <input type="tel" required>
+            </div>
+
+            <div class="field">
+                <label>כתובת</label>
+                <input type="text">
+            </div>
+
+            <div class="field">
+                <label>קומה</label>
+                <input type="text">
+            </div>
+
+            <div class="field">
+                <label>דירה</label>
+                <input type="text">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>גודל הפיצה:</legend>
+            <label>
+                <input type="radio" name="size">S
+            </label>
+
+            <label>
+                <input type="radio" name="size">M
+            </label>
+
+            <label>
+                <input type="radio" name="size">L
+            </label>
+
+            <label>
+                <input type="radio" name="size">XL
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>תוספות לפיצה:</legend>
+            <label>
+                <input type="checkbox" name="add">זיתים
+            </label>
+
+            <label>
+                <input type="checkbox" name="add">בצל
+            </label>
+
+            <label>
+                <input type="checkbox" name="add">בולגרית
+            </label>
+
+            <label>
+                <input type="checkbox" name="add">עגבנייה
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>אמצעי תשלום:</legend>
+            <select>
+                <option></option>
+                <option>אשראי</option>
+                <option>מזומן</option>
+                <option>העברה בנקאית</option>
+                <option>ביט</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <div class="field">
+                <legend>הערות</legend>
+                <textarea></textarea>
+            </div>
+        </fieldset>
+
+        <button type="submit">שלח</button>
+    </form>
+</body>
+
+
+</html>

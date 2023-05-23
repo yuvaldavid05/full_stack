@@ -1,0 +1,134 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,500&display=swap');
+
+
+html{
+scroll-behavior: smooth;
+}
+
+
+body{
+  /* כיוון האתר מימין לשמאל */
+    direction: rtl;
+    /* שינוי גופן לאתר */
+    font-family: 'Rubik', sans-serif;
+    /* רקע */
+    background-color: darkslateblue;
+}
+h1{
+    /* יישור טקסט */
+    text-align: center;
+    /* צבע הטקסט */
+    color: white;
+  }
+
+.frame{
+  /* רוחב */
+  width: 80%;
+  /* מקסימום רוחב */
+  max-width: 800px; 
+   /* מינימום גובה */
+  min-height: 500px;
+   /* רקע */
+  background-color: white;
+ /* ריווח חיצוני אוטומטי (גורם למרכוס האלמנט) */
+  margin:auto;
+ /* ריווח פנימי של האלמנט */
+  padding: 8px 16px;
+  /* עיגול קצוות */
+  border-radius: 6px;
+
+}
+
+.images{
+  text-align: center;
+  margin: auto;
+  width: 80%;
+}
+
+.navbar{
+    background-color: #00d6f1;
+    text-align: right;
+    margin: -8px -16px 16px -16px;
+    border-radius: 6px;
+}
+
+.navbar a {
+    /* ריווח פנימי מכל הכיוונים */
+    padding: 8px;
+    /* שינוי מצב תצוגה */
+    display: inline-block;
+    /* ביטול קו תחתון */
+    text-decoration: none;
+    color: white;
+}
+
+
+/* עיצוב נוסף במעבר עכבר  */
+.navbar a:hover {
+    background-color: rgb(11, 224, 153);
+}
+
+/* עיצוב נוסף תוך כדי לחיצה עם העכבר */
+.navbar a:active {
+    background-color: chocolate;
+
+}
+
+/* עיצוב לאחר ביקור בקישור */
+.navbar a:visited {
+    background-color: red
+} 
+
+/* יצרנו קלאס לצורך התפריט */
+/* צובע בתפריט את הקישור לדף הפעיל */
+.active {
+    background-color: #07d892;
+}
+
+img {
+    width: 49%;
+    /*  משנה את העיצוב בהנפשה  */
+    transition: 0.3s;
+}
+
+img:hover {
+  /* משנה את גודל האלמנט ללא השפעה על הסביבה */
+    scale: 1.1;
+}
+
+ul {
+  /* את הסימונים של הרשימה */
+  list-style-type: none;
+  padding: 0;
+  background-color:antiquewhite
+
+}
+
+ul li{
+  padding: 8px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid;
+}
+
+table {
+  width: 100%;
+  /* מחבר את כל התאים יחד */
+  border-collapse: collapse;
+  /* רוחב אחיד לכל העמודות */
+  table-layout: fixed;
+
+}
+
+th, td {
+  /* גבול לתאים של הטבלה */
+  border: 1px solid;
+  height: 30px;
+  text-align: center;
+
+}
+/*  
+tr:hover{
+  background-color: coral;
+}
+*/

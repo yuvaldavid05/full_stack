@@ -1,0 +1,176 @@
+.ex1 div{
+    width:100px;
+    height: 100px;
+    background-color: whitesmoke;
+    border: 1px solid green;
+    display:inline-block;
+}
+
+.ex1 div:nth-child(4){
+    background-color: green;
+    position: relative;
+    top:30px;
+    left:35px;
+
+}
+
+.ex2 div{
+    width:100px;
+    height: 100px;
+    background-color: whitesmoke;
+    border: 1px solid green;
+    display:inline-block;
+}
+
+
+.ex2 div:nth-child(4){
+    background-color: green;
+    position: relative;
+    top:-25px;
+    left:-30px;
+
+}
+
+.ex3{
+    background-color:rgb(164, 173, 146);
+    width: 700px;
+    height: 500px;
+    position:relative;
+}
+
+.ex3 div{
+    width:100px;
+    height:80px;
+    background-color: cadetblue;
+    border:1px solid black;
+    display: inline-block;
+    position:absolute;
+}
+
+.ex3 div:first-child{
+    background-color: red;
+    top:300px;
+    right:100px;
+}
+
+.ex3 div:last-child{
+    background-color: blue;
+    top:150px;
+    left:30px;
+}
+
+.ex4 div{
+    width:100px;
+    height: 100px;
+    background-color: whitesmoke;
+    border: 1px solid green;
+    display:inline-block;
+}
+
+
+.ex4 div:nth-child(3){
+    position:relative;
+    z-index: 2;
+}
+
+.ex4 div:nth-child(4){
+    background-color: green;
+    position: relative;
+    top:20px;
+    left:40px;
+}
+
+.ex5{
+    width:200px;
+    height:200px;
+    position:relative;
+}
+
+.ex5 div{
+    width:100px;
+    height:100px;
+    background-color: rgb(78, 78, 233);
+    position: absolute;
+}
+
+.ex5 div:nth-child(2){
+    background-color: orange;
+    margin:auto;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    z-index: 1;
+}
+
+.ex5 div:last-child{
+    background-color: purple;
+    margin:auto;
+    bottom:0;
+    left:0;
+}
+
+
+.ex6 .rec{
+    width:200px;
+    height:150px;
+    background-color: rgb(236, 172, 99);
+    border:1px solid black;
+    display:inline-block;
+    position:relative;
+}
+
+.rec div{
+    width:80px;
+    height: 60px;
+    background-color: darkcyan;
+    position:absolute;
+}
+
+.rec:nth-child(2) div{
+    margin:auto;
+    right:0;
+    left:0;
+}
+
+.rec:nth-child(3) div{
+left:0;
+}
+
+.rec:nth-child(4) div{
+margin:auto;
+top:0;
+bottom:0;
+}
+
+.rec:nth-child(5) div{
+margin:auto;
+right:0;
+left:0;
+top:0;
+bottom:0;
+}
+
+.rec:nth-child(6) div{
+margin:auto;
+left:0;
+top:0;
+bottom:0;
+}
+
+.rec:nth-child(7) div{
+bottom:0;
+right:0;
+}
+
+.rec:nth-child(8) div{
+    margin: auto;
+bottom:0;
+right:0;
+left:0;
+}
+
+.rec:nth-child(9) div{
+left:0;
+bottom:0;
+}

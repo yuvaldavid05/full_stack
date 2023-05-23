@@ -1,0 +1,141 @@
+h2{
+    background-color: rgb(240, 202, 126);
+    padding: 8px;
+    margin: 8px 0;
+    border: 2px dashed gray;
+    border-right: 0;
+    border-left: 0;
+    text-align: center;
+}
+
+.borders{
+    text-align: center;
+}
+
+.borders div{
+    display: inline-block;
+    width: 32%;
+    height:50px;
+    box-sizing: border-box;
+}
+
+.borders div:first-child{
+    border: 2px solid rgb(255, 49, 49);
+}
+
+.borders div:nth-child(2){
+    border: 4px solid;
+    border-top-color:rgb(193, 59, 255) ;
+    border-bottom-color:rgb(255, 42, 77);
+}
+
+.borders div:nth-child(3){
+    border: 2px dotted;
+    border-left: 10px solid;
+    border-color:orange;
+}
+
+.display div{
+    background-color: yellow;
+    min-height: 30px;
+    margin: 6px;
+}
+
+.display div:nth-child(2){
+    display: inline-block;
+    width: 200px;
+}
+
+.display div:nth-child(3){
+    display: inline;
+}
+
+
+.overflow div{
+    display: inline-block;
+    width: 32%;
+    height:100px;
+    box-sizing: border-box;
+    background-color: rgb(216, 172, 140);
+}
+
+
+.overflow div:nth-child(2) {
+    overflow: hidden;
+}
+
+.overflow div:nth-child(3) {
+    overflow: auto;
+}
+
+
+.overflow div p{
+    margin: 0;
+    font-weight: bold;
+}
+
+
+.outside {
+    background: beige;
+    padding: 8px;
+}
+
+.outside div {
+    background-color: aquamarine;
+    padding: 30px;
+    margin: 12px;
+    border: 1px solid;
+}
+
+.outside p {
+    direction: ltr;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+.radius div {
+    display: inline-block;
+    width: 32%;
+    height: 150px;
+    box-sizing: border-box;
+    border: 6px solid purple;
+}
+
+.radius div:first-child {
+    border-radius: 30px;
+}
+
+.radius div:nth-child(2) {
+    border-radius: 0 50px 0 50px;
+}
+
+.radius div:nth-child(3) {
+    border-radius: 50%;
+}
+
+.shadow {
+    text-align: center;
+}
+
+.shadow div {
+    display: inline-block;
+    width: 28%;
+    height: 150px;
+    margin: 0 8px;
+    box-sizing: border-box;
+    background-color: #c96f00;
+    border-radius: 6px;
+}
+
+.shadow div:first-child {
+    box-shadow: 2px 2px 6px gray;
+}
+
+.shadow div:nth-child(2) {
+    box-shadow: 0 0 58px 13px inset;
+}
+
+.shadow div:nth-child(3) {
+    box-shadow: 4px 4px 0;
+}

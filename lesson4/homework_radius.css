@@ -1,0 +1,45 @@
+div{
+    width: 120px;
+    height: 120px;
+    margin: 12px;
+    display: inline-block;
+    background-color: aqua;
+}
+
+.frame div:first-child{
+    border-radius: 50%;
+    background-color: pink;
+}
+
+.frame div:nth-child(2){
+    border-radius: 0 50% 0 50%;
+    background-color: blueviolet;
+}
+
+.frame div:nth-child(3){
+    border-radius: 30%;
+    background-color: rgb(255, 67, 67);
+}
+
+.frame div:nth-child(4){
+    border-radius: 30% 30% 0 0;
+    background-color: rgb(57, 242, 255);
+}
+
+.frame div:nth-child(5){
+    border-radius: 14px 0 40px 0;
+    background-image: url(https://cdn.istores.co.il/image/upload/c_limit,w_1200,h_630/clients/15167/7ce9bc009d68eea5e18d661c918c38e076947a00.jpg);
+    background-size:cover ;
+}
+
+.frame div:nth-child(6){
+    border-radius: 60px 20px;
+    background-color:darkgoldenrod;
+    border-style: groove;
+}
+
+.frame div:nth-child(7){
+    border-radius: 50%;
+    background-color:rgb(255, 255, 255);
+    border: 4px dotted black;
+}

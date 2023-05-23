@@ -1,0 +1,191 @@
+body{
+    direction: rtl;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+h1{
+    text-align: center;
+    background-color: rgb(192, 136, 147);
+}
+
+h2{
+    color: rgb(248, 117, 139);
+    border:1px solid;
+    text-align: center;
+}
+
+.inside {
+    width: 32%;
+    height: 120px;
+    background-color: burlywood;
+    display: inline-block;
+    border: 1px solid gray;
+    position: relative;
+}
+
+.inside div{
+    width:80px;
+    height: 40px;
+    background-color: rgb(173, 233, 114);
+    position: absolute;
+}
+
+.inside:nth-child(2) div{
+margin: auto;
+right: 0;
+left: 0;
+}
+
+.inside:nth-child(3) div{
+left:0;
+}
+
+.inside:nth-child(4) div{
+margin: auto;
+top:0;
+bottom:0;
+}
+
+.inside:nth-child(5) div{
+margin: auto;
+top:0;
+bottom:0;
+right:0;
+left:0;
+}
+
+.inside:nth-child(6) div{
+margin:auto;
+left: 0;
+top:0;
+bottom:0;
+}
+
+.inside:nth-child(7) div{
+bottom:0;
+}
+
+.inside:nth-child(8) div{
+margin:auto;
+bottom:0;
+right:0;
+left:0;
+}
+
+.inside:nth-child(9) div{
+left:0;
+bottom:0;
+}
+
+.ex2{
+background-color: rgb(214, 209, 209);
+min-height: 600px;
+width: 700px;
+margin: auto;
+
+}
+
+.ex2 h3{
+background-color: rgb(51, 51, 228);
+color:whitesmoke;
+margin-bottom: 8px;
+text-align: center;
+}
+
+.ex2 nav{
+    background-color: burlywood;
+}
+
+.ex2 a{
+    padding: 8px;
+    text-decoration: none;
+    color:black;
+    border-left: 1px solid gray;
+    display:inline-block;
+    text-align: right;
+}
+
+.ex3 div{
+    width: 600px;
+    height: 40px;
+    padding: 8px;
+    margin: 8px;
+}
+
+.ex3 div:first-child{
+background-color: yellow;
+}
+
+.ex3 div:nth-child(2){
+background-color: green;
+color:white;
+}
+
+.ex3 div:last-child{
+background-color: rgb(44, 44, 202);
+color:white;
+}
+
+.border{
+    width: 600px;
+    height: 40px;
+    padding: 8px;
+    margin: 8px;
+    position: relative;
+}
+
+.border div{
+    width:580px;
+    height: 20px;
+    padding: 8px;
+    position: absolute;
+    margin:auto;
+    top:0;
+    bottom:0;
+}
+
+.border:first-child {
+background-color: yellow;
+}
+
+
+.border:first-child div {
+background-color:green;
+}
+
+.border:last-child{
+background-color: rgb(255, 101, 45);
+}
+
+.border:last-child div{
+background-color:rgb(68, 68, 255);
+}
+
+
+.ex5 img{
+    width:350px;
+    float:right;
+    margin:8px;
+}
+
+.ex6{
+    height: 900px;
+}
+
+.ex6 nav{
+    background-color: rgb(63, 198, 239);
+}
+
+.ex6 ul{
+    text-decoration-style: none;
+}
+
+.ex6 li{
+    display: inline-block;
+}
+
+.ex6 ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+}

@@ -1,0 +1,162 @@
+body{
+    background-color: rgb(226, 226, 140);
+    direction: rtl;
+}
+h1{
+    margin: auto;
+}
+
+.ex1{
+    background-color: rgb(196, 159, 111);
+    min-height: 400px;
+    width: 900px;
+    padding: 12px;
+}
+
+.ex1 div{
+background-color: gray;
+position: relative;
+width:100px;
+    height: 100px;
+    display: inline-block;
+}
+
+.ex1 div:nth-child(4){
+    background-color: red;
+    position: relative;
+    right: -40px;
+    bottom: -36px;
+}
+
+.ex2{
+    background-color: rgb(238, 165, 222);
+    min-height: 400px;
+    width: 900px;
+    padding: 12px;
+}
+
+.ex2 div{
+    width:100px;
+    height: 100px;
+    display: inline-block;
+}
+
+
+.ex2 div:first-child{
+background-color: blue;
+}
+
+.ex2 div:nth-child(2){
+background-color: orange;
+position: relative;
+left:40px;
+top:25px;
+z-index: 1;
+}
+
+.ex2 div:last-child{
+background-color: purple;
+position: relative;
+left:70px;
+top:50px;
+}
+
+.ex3{
+    width: 900px;
+    height: 400px;
+    background-color: grey;
+    position: relative;
+}
+
+.ex3 div{
+position: absolute;
+width:100px;
+    height: 100px;
+    display: inline-block;
+}
+
+.ex3 div:first-child{
+background-color: red;
+top:250px;
+right:200px;
+
+}
+
+.ex3 div:nth-child(2){
+background-color: blue;
+left:23px;
+top:120px;
+}
+
+.ex4 div{
+    width:100px;
+    height: 100px;
+    background-color:whitesmoke ;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+
+.ex4 div:nth-child(3){
+    position: relative;
+    z-index: 1;
+}
+
+.ex4 div:nth-child(4){
+    background-color: red;
+    position: relative;
+    top:21px;
+    left:45px;
+    
+}
+
+.ex5{
+    width: 400px;
+    height: 300px;
+    padding: 12px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.ex5 div{
+    width:100px;
+    height: 100px;
+    background-color: rgb(197, 164, 121);
+    border: 1px solid black;
+    display: inline-block;
+    position: absolute;
+}
+
+.ex5 div:first-child{
+    background-color: blue;
+}
+
+.ex5 div:nth-child(2){
+    background-color:orange;
+    right:65px;
+    top:40px;
+    z-index: 1;
+}
+
+.ex5 div:last-child{
+    background-color:purple;
+    right: 120px;;
+    top: 85px;
+}
+
+.ex6 div{
+    width:100px;
+    height: 100px;
+    background-color: crimson;
+    display: inline-block;
+    border:1px solid black;
+    position: relative;
+    transition: 2s;
+}
+
+.ex6 div>div{
+position: absolute;
+top:30px;
+right:50px;
+}
+

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Bootstrap</title>
+</head>
+
+<body>
+    <h1>ברוכים הבאים ל-Bootstrap</h1>
+
+    <div class="card">
+        <div class="card-header">כפתורים</div>
+        <div class="card-body">
+            <button class="btn">Basic</button>
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-secondary">Secondary</button>
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-info">Info</button>
+            <button class="btn btn-warning">Warning</button>
+            <button class="btn btn-danger">Danger</button>
+            <button class="btn btn-dark">Dark</button>
+            <button class="btn btn-light">Light</button>
+            <button class="btn btn-link">Link</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Dropdown</div>
+        <div class="card-body">
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Link 1</a></li>
+                    <li><a class="dropdown-item" href="#">Link 2</a></li>
+                    <li><a class="dropdown-item" href="#">Link 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">List</div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">First item</li>
+                <li class="list-group-item">Second item</li>
+                <li class="list-group-item">Third item</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Navbar</div>
+        <div class="card-body">
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <div class="container-fluid">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link 3</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Alert</div>
+        <div class="card-body">
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Success!</strong> This alert box could indicate a successful or positive action.
+            </div>
+            <div class="alert alert-info alert-dismissible">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+            </div>
+            <div class="alert alert-warning alert-dismissible">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+            </div>
+            <div class="alert alert-danger alert-dismissible">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+            </div>
+            <div class="alert alert-primary alert-dismissible">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Primary!</strong> Indicates an important action.
+            </div>
+            <div class="alert alert-secondary alert-dismissible">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Secondary!</strong> Indicates a slightly less important action.
+            </div>
+            <div class="alert alert-dark alert-dismissible">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Dark!</strong> Dark grey alert.
+            </div>
+            <div class="alert alert-light alert-dismissible">
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <strong>Light!</strong> Light grey alert.
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">טופס</div>
+        <div class="card-body">
+            <form action="/action_page.php">
+                <div class="mb-3 mt-3">
+                    <label for="email">אימייל:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="pwd">סיסמה:</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                </div>
+                <div class="form-check mb-3">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember"> זכור אותי
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">שלח</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Responsive</div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/img (2).jpg">
+                        <div class="card-body">
+                            <h4 class="card-title">תמונה 1</h4>
+                            <p class="card-text">לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית סחטיר בלובק. תצטנפל
+                                בלינדו למרקל אס לכימפו, דול, צוט ומעיוט לפתיעם ברשג. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/img (7).jpg">
+                        <div class="card-body">
+                            <h4 class="card-title">תמונה 2</h4>
+                            <p class="card-text">לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית סחטיר בלובק. תצטנפל
+                                בלינדו למרקל אס לכימפו, דול, צוט ומעיוט לפתיעם ברשג. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/img (9).jpg">
+                        <div class="card-body">
+                            <h4 class="card-title">תמונה 3</h4>
+                            <p class="card-text">לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית סחטיר בלובק. תצטנפל
+                                בלינדו למרקל אס לכימפו, דול, צוט ומעיוט לפתיעם ברשג. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">טבלה</div>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>שם פרטי</th>
+                        <th>שם משפחה</th>
+                        <th>אימייל</th>
+                        <th>טלפון</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Wheeler</td>
+                        <td>Guyonneau</td>
+                        <td>wguyonneau0@wufoo.com</td>
+                        <td>668-715-0256</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Husein</td>
+                        <td>Somes</td>
+                        <td>hsomes1@blogger.com</td>
+                        <td>720-685-1471</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Danna</td>
+                        <td>Rodders</td>
+                        <td>drodders2@discuz.net</td>
+                        <td>179-887-6671</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Boyd</td>
+                        <td>Brilleman</td>
+                        <td>bbrilleman3@marketwatch.com</td>
+                        <td>791-293-3785</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Chucho</td>
+                        <td>Aizikov</td>
+                        <td>caizikov4@sciencedirect.com</td>
+                        <td>271-417-2301</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Modal</div>
+        <div class="card-body">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">דוגמא
+                1</button>
+
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">כותרת</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            תוכן...
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">סגור</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">Carusle</div>
+        <div class="card-body">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/img (2).jpg" alt="Los Angeles" class="d-block">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/img (7).jpg" alt="Chicago" class="d-block">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/img (9).jpg" alt="New York" class="d-block">
+                    </div>
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

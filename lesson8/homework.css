@@ -1,0 +1,78 @@
+.ex div{
+background-color: aquamarine;
+border: 1px solid black;
+padding: 50px;
+height:30px;
+text-align: center;
+/* box-sizing: border-box; */
+}
+
+.ex1{
+display: grid;
+grid-template-columns: auto auto auto;
+}
+
+.ex1 div:first-child{
+    background-color: green;
+}
+
+.ex1 div:nth-child(2){
+    background-color: rgb(216, 224, 138);
+}
+
+.ex1 div:nth-child(3){
+    background-color: rgb(82, 181, 228);
+}
+
+.ex1 div:nth-child(4){
+    background-color: rgb(231, 168, 32);
+}
+
+.ex1 div:nth-child(5){
+    background-color: rgb(29, 38, 88);
+}
+
+.ex1 div:nth-child(6){
+    background-color: rgb(16, 87, 34);
+}
+
+
+.ex2{
+display: grid;
+grid-template-columns: 25% 50% 25%;
+}
+
+
+.ex3{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.ex3 div:first-child{
+grid-column: 1/4;
+}
+
+
+.ex4{
+    display:grid;
+    grid-template-columns: auto auto auto;
+}
+
+.ex4 div:first-child{
+    grid-column: 1/3;
+}
+
+.ex4 div:nth-child(3){
+    grid-row:2/4;
+}
+
+.ex4 div:nth-child(4){
+    grid-column:2/4 ;
+}
+
+
+.ex5{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    gap:12px;
+}

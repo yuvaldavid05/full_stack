@@ -1,0 +1,17 @@
+.myDiv{
+    background-color: chartreuse;
+    padding: 16px
+}
+
+.myDiv>div{
+    background-color: rgb(102, 87, 192);
+    margin: 12px;
+    padding: 12px;
+}
+
+.myDiv>div:last-child{
+    margin-top: 50px;
+}
+.myDiv>div:first-child{
+    margin-top: 40px 0;
+}

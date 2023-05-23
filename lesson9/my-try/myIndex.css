@@ -1,0 +1,71 @@
+body {
+  background-color: rgb(113, 156, 113);
+  direction: rtl;
+}
+body h1 {
+  font-size: 33px;
+  color: pink;
+  text-align: center;
+  margin: 12px;
+  font-size: 35px;
+}
+body .all {
+  min-width: 500px;
+  min-height: 900px;
+  background-color: rgb(120, 192, 168);
+  border-radius: 12px;
+}
+body .all h2 {
+  padding: 15px;
+  border: 1px dotted grey;
+  font-size: 30px;
+}
+
+.ex {
+  display: flex;
+}
+.ex div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 150px;
+  background-color: burlywood;
+  border: 1px solid black;
+  font-size: 20px;
+}
+.ex div:first-child {
+  background-color: rgb(71, 71, 216);
+}
+.ex div:nth-child(2) {
+  background-color: rgb(71, 175, 216);
+}
+.ex div:last-child {
+  background-color: rgb(71, 216, 144);
+}
+
+.ex2 {
+  justify-content: center;
+}
+
+.ex3 {
+  justify-content: space-between;
+}
+
+.ex4 {
+  flex-wrap: wrap;
+}
+.ex4 div {
+  width: 400px;
+}
+
+.ex5 {
+  background-color: rgb(236, 195, 132);
+  height: 400px;
+}
+.ex5 div:nth-child(2) {
+  align-self: center;
+}
+.ex5 div:last-child {
+  align-self: end;
+}/*# sourceMappingURL=myIndex.css.map */

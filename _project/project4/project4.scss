@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+html{
+    height:100%;
+}
+
+body{
+    background-image: linear-gradient(180deg, #281EFF , #2DFF8C);
+    text-align: center;
+    direction: rtl;
+}
+
+.outside{
+    
+
+    .inside{
+
+        h1{
+        color:#FFFFFF;
+        font-size: 120px;
+        font-family: 'Satisfy', cursive;
+        font-weight: 300;
+        margin:120px 0 40px 0;
+        text-shadow: #00000087 0 30px 36px;
+        }
+
+        form{
+        color:#FFFFFF;
+        font-family: 'Varela Round', sans-serif;
+        margin:25px;
+        box-sizing: border-box;
+        
+        h3{
+            font-size: 20px;
+        }
+
+        p{
+            font-size: 16px;
+            padding-bottom: 25px;
+        }
+        .form-label{
+        font-weight: normal;
+        margin:10px 15px;
+        }
+
+        .form-input{
+            background-color:#00000000;
+            border:1px solid white;
+            border-radius: 2px;
+            height:25px;
+        }
+
+        .form-button{
+            height:32px;
+            min-width:110px;
+            font-size:12px;
+            color:#1C1C1C;
+            font-family: 'Varela Round', sans-serif;
+            border:1px solid white;
+            border-radius: 1px;
+            margin:15px 0;
+        }
+    }
+}
+}
+
+@media (max-width: 612px) {
+    .inside{
+        margin:8px;
+        form{
+            
+            .form-input{
+            width:100%;
+            margin:auto;
+            }
+    
+            button{
+            width:100%;
+            margin:auto;
+            }
+        }
+}
+}

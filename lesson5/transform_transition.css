@@ -1,0 +1,52 @@
+body {
+    background-image: pink
+}
+
+h2 {
+    background-color: rgb(240, 202, 126);
+    padding: 8px;
+    margin: 8px 0;
+    border: 2px dashed gray;
+    border-right: 0;
+    border-left: 0;
+    text-align: center;
+}
+
+.myDiv {
+    width: 300px;
+    height: 180px;
+    transition: 0.6s;
+
+}
+
+.div1{
+    background-color: brown;
+}
+
+.div1:hover{
+    transform: rotate(90deg);
+}
+
+.div2{
+    background-color: rgb(42, 165, 124);
+}
+
+.div2:hover{
+    transform:rotate3d(1,1,1,360deg);
+}
+
+.div3{
+    background-color: rgb(165, 42, 138);
+}
+
+.div3:hover{
+    transform: rotate(360deg);
+}
+
+.div4{
+    background-color: rgb(95, 42, 165);
+}
+
+.div4:hover{
+    transform: rotate(20deg) scale(1.5);    
+}

@@ -1,0 +1,44 @@
+.frame {
+    padding: 0;
+}
+
+nav {
+    width: 150px;
+    background-image: linear-gradient(45deg, #009688, #72c8c0);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    border-bottom: 1px solid white;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    padding: 8px;
+    display: block;
+    color: white;
+    font-size: 20px;
+}
+
+a:hover {
+    background-color: #ffffff47;
+}
+
+.open-menu {
+    position: absolute;
+    background-image: linear-gradient(45deg, #009688, #72c8c0);
+    width: 150px;
+    right: 100%;
+    top: 0;
+    display: none;
+}
+
+li:hover .open-menu {
+    display: block;
+}

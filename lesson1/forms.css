@@ -1,0 +1,61 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+
+
+body{
+    direction: ttl;
+    background-color: aqua;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+h1 {
+    text-align: center;
+
+}
+
+form{
+    width: 80%; 
+    background-color: white; 
+    padding: 24px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #5c5c5c;
+    margin: auto;
+    max-width: 600px;
+
+}
+
+div {
+    margin-bottom: 12px;
+    max-width: 300px;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0 0 3px #000000b3;
+    box-sizing: border-box;
+}
+
+label{
+    display: block;
+    margin-bottom: 3px;
+}
+
+input {
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid gray;
+    /* width: 100%; */
+    box-sizing: border-box;
+}
+
+.myClass {
+    border-right: 5px solid burlywood;
+}
+
+#myId{
+    background-color: blueviolet;
+}
+
+#birthday{
+    background-color: #de8383;
+}
