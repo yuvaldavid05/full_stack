@@ -73,6 +73,8 @@ h1{
         height:80%;
         width:80%;
         position:absolute;
+        border: 1px solid #49d8d8a0;
+        
     }
 
     .frame-img{
@@ -124,9 +126,9 @@ h1{
     }
     
     .button2:hover{
-        background-color: #9b8d79;
+        background-color: #6e5da3;
         border:1px dotted #020253;
-        color:#020253
+        color:#ffffff
     }
 
     footer{
