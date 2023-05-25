@@ -1,0 +1,21 @@
+body{
+    direction: rtl;
+    background-color: #E5EEFF;
+}
+
+.bigDiv{
+display:inline-grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
+max-width: 100%;
+gap: 12px;
+}
+
+div{
+    background-color: rgb(136, 159, 159);
+}
+
+.frame>div:first-child{
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}

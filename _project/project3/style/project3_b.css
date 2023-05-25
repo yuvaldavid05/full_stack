@@ -9,7 +9,7 @@ body {
 
 .bigDiv {
   height: 500px;
-  background-image: url(Path\ 15.png);
+  background-image: url(../images/Path\ 15@2x.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -42,18 +42,22 @@ form {
   justify-content: center;
   font-family: "Heebo", sans-serif;
 }
+form .form-div {
+  display: inline-block;
+  margin: 12px;
+  width: 300px;
+}
 form label {
-  font-size: 16px;
+  font-size: 14px;
   color: #011560;
   font-weight: bold;
-  margin: 5px;
+  display: block;
 }
 form input {
   height: 28px;
-  width: 200px;
+  width: 100%;
   border: none;
-  border-bottom: 2px solid #D3E10E;
-  margin: 0 5px;
+  border-bottom: 3px solid #D3E10E;
 }
 form button {
   position: relative;
@@ -62,9 +66,10 @@ form button {
   color: #011560;
   font-weight: bold;
   border: none;
-  width: 90px;
+  width: 110px;
   height: 30px;
-  margin: 8px;
+  margin: 16px;
+  font-size: 15px;
 }
 
 @media (max-width: 768px) {
@@ -86,11 +91,13 @@ form button {
   form {
     display: block;
   }
-  form label {
-    font-size: 12px;
+  form .form-div {
+    display: block;
+    width: 100%;
   }
   form input {
     width: 100%;
+    background-color: #E5EEFF;
   }
   form button {
     width: 100%;
