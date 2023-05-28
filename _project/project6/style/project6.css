@@ -7,18 +7,32 @@ body{
 
 .opening-div{
     background-color:#0EE1E1;
-    height: 450px;
+    height: 500px;
     direction: ltr;
     display:flex;
+    position:relative;
    
 }
 
+.o{
+    background-image: url(../images/Group\ 1050.jpg);
+    width:400px;
+    background-position: center;
+    background-repeat: no-repeat;
 
-.box img{
+    position:absolute;
+    margin:auto;
+    top: 0;
+    bottom:0;
+    right: 30;
+    
+}
+
+/* .box img{
     position:relative;
     top:100px;
     background-color: none;
-}
+} */
 
 .bigText{
     position: relative;
@@ -136,7 +150,6 @@ body{
     .button2{
         width: 100%;
         height: 37px;
-        margin:12px;
         background-color:#0EE1E1;
         border:none;
         border-radius: 0;
