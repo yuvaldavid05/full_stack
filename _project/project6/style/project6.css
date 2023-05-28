@@ -14,29 +14,25 @@ body{
    
 }
 
-.o{
-    background-image: url(../images/Group\ 1050.jpg);
-    width:400px;
-    background-position: center;
-    background-repeat: no-repeat;
-
+.box img{
     position:absolute;
     margin:auto;
     top: 0;
     bottom:0;
     right: 30;
+    mix-blend-mode: color-burn;
     
 }
 
 /* .box img{
     position:relative;
     top:100px;
-    background-color: none;
 } */
 
 .bigText{
-    position: relative;
-    top:100px;
+    /* position: relative;
+    top:100px; */
+    margin:100px;
     direction: rtl;
     font-size: 16px;
 }
@@ -48,7 +44,7 @@ body{
 }
 
 .bigText p{
-    font-size: 15px;
+    font-size: 20px;
     padding-left: 80px;
 }
 
@@ -200,6 +196,11 @@ body{
 
     @media (max-width: 768px) {
         
+        .opening-div{
+            display:block;
+            direction: rtl;
+        }
+
         .bigText {
             width:100%;
             text-align: center;
@@ -211,7 +212,11 @@ body{
         }
 
         .bigText p{
-            font-size: 15px;
+            font-size: 18px;
+        }
+
+        .box{
+            width:50px;
         }
 
         .container{
