@@ -175,7 +175,7 @@ body{
         position: relative;
     }
 
-    footer img{
+    footer div>img{
         height:30px;
         position: absolute;
         top:0;
