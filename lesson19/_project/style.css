@@ -37,7 +37,6 @@ nav {
 
 li.nav-item {
   margin: 0 12px;
-  white-space: nowrap;
 }
 
 a.nav-link {
@@ -85,7 +84,7 @@ a.nav-link {
   margin: 30px;
   font-weight: bold;
 }
-#about a {
+#about button {
   margin-top: 20px;
   font-size: 1.4em;
   border-radius: 30px;
