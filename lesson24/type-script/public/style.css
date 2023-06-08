@@ -2,7 +2,7 @@
 
 body {
     direction: rtl;
-    background-color: #8623bf;
+    background-color: #1b6fb3;
     padding-bottom: 200px;
 }
 
@@ -58,64 +58,56 @@ select {
     margin-top: 3px;
 }
 
-.studentCards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+img {
+    width: 100%;
 }
 
-.studentCards>div {
-    box-shadow: 0 0 3px #7b7b7b;
-    background-color: white;
-    border-radius: 5px;
-    padding: 0 14px;
+p {
+    margin: 8px 0;
 }
 
-.frame header {
+.alert {
+    padding: 8px 12px;
+    margin: 0 -16px;
     text-align: center;
-    padding: 18px;
-}
-
-.frame header label {
-    padding: 6px 12px;
-    border-radius: 16px;
-    background-color: white;
-    margin: 0px 4px;
-    display: inline-block;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.frame header label:hover {
-    scale: 1.2;
-}
-
-.frame header label.active {
-    background-color: #8623bf;
+    border: 1px dashed;
+    border-right: 0;
+    border-left: 0;
+    font-size: 20px;
+    background-color: gray;
+    margin-bottom: 12px;
     color: white;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+#gallery {
+    position: relative;
 }
 
-tr {
-    background-color: white;
+#gallery button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 70px;
+    background-color: #00000091;
+    font-size: 22px;
+    display: none;
 }
 
-tr:first-child {
-    background: none;
+#gallery button:hover {
+    background-color: black;
 }
 
-tr:nth-child(even) {
-    background-color: #d9d9d9;
+#gallery:hover button {
+    display: block;
 }
 
-th {
-    text-align: center;
+#right {
+    right: 0;
+    border-radius: 20px 0 0 20px;
 }
 
-th, td {
-    padding: 6px;
+#left {
+    left: 0;
+    border-radius: 0 20px 20px 0;
 }

@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap');
 
+html {
+    min-height: 100%;
+}
+
 body {
     direction: rtl;
-    background-color: #8623bf;
+    background-image: linear-gradient(#4770bd, #d0cee9);
     padding-bottom: 200px;
 }
 
@@ -58,64 +62,23 @@ select {
     margin-top: 3px;
 }
 
-.studentCards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-.studentCards>div {
-    box-shadow: 0 0 3px #7b7b7b;
-    background-color: white;
-    border-radius: 5px;
-    padding: 0 14px;
-}
-
-.frame header {
-    text-align: center;
-    padding: 18px;
-}
-
-.frame header label {
-    padding: 6px 12px;
-    border-radius: 16px;
-    background-color: white;
-    margin: 0px 4px;
-    display: inline-block;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.frame header label:hover {
-    scale: 1.2;
-}
-
-.frame header label.active {
-    background-color: #8623bf;
-    color: white;
-}
-
-table {
+img {
     width: 100%;
-    border-collapse: collapse;
 }
 
-tr {
-    background-color: white;
+p {
+    margin: 8px 0;
 }
 
-tr:first-child {
-    background: none;
-}
-
-tr:nth-child(even) {
-    background-color: #d9d9d9;
-}
-
-th {
+.alert {
+    padding: 8px 12px;
+    margin: 0 -16px;
     text-align: center;
-}
-
-th, td {
-    padding: 6px;
+    border: 1px dashed;
+    border-right: 0;
+    border-left: 0;
+    font-size: 20px;
+    background-color: gray;
+    margin-bottom: 12px;
+    color: white;
 }

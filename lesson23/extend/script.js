@@ -31,7 +31,9 @@ class Student extends Person {
     grades = [];
 
     getAverage() {
-
+        this.student.grades = this.grades;
+        const avg = Math.round(this.grades.redce((res , n) => res += n, 0) / this.grades.length);
+        return avg;
     }
 
     getBestGrade() {
@@ -61,6 +63,7 @@ const student = new Student({
     email: 'abc@abc.abc',
     city: 'Kfar haruv',
     birthday: '2022-01-01',
+    grades: [80 , 60 , 85, 90, 100],
 });
 
 const teacher = new Teacher({
@@ -82,3 +85,5 @@ const director = new Director({
     city: 'Kiryat Arba',
     birthday: '2003-10-04',
 });
+
+// console.log(student.getAverage());
