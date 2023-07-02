@@ -2,21 +2,22 @@ const numbers = [27,27,41,37,29,54,6,95,22,63,33,34,68,42,99,61,46,41,79,9,59,59
 
 document.getElementById("numbers").innerHTML = numbers.join(", ");
 
-function sum(){
+function sum() {
     let res = 0;
 
-    for(i = 0; i < numbers.length; i++){
+    for (let i = 0; i < numbers.length; i++) {
         res += numbers[i];
     }
 
     document.getElementById("output1").innerHTML = res;
 }
 
-function sum(){
+function showAsterisks() {
     const arr = [];
 
-    for(i = 0; i < 10; i++){
+    for (let i = 0; i < 10; i++) {
         arr.push("*");
     }
+
     document.getElementById("output2").innerHTML = arr.join("<br>");
 }

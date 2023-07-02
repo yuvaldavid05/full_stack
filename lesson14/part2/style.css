@@ -1,22 +1,26 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap');
 
 body {
     direction: rtl;
-    font-family: 'Rubik', sans-serif;
-    background-color: rgb(253, 41, 158);
+    background-color: #a9c34a;
+    padding-bottom: 200px;
+}
+
+* {
+    font-family: 'Rubik', sans-serif !important;
 }
 
 h1 {
     text-align: center;
     color: white;
+    margin: 16px;
 }
 
 .frame {
     width: 80%;
     max-width: 900px;
     min-height: 300px;
-    background-color: white;
+    background-color: #ffffffc9;
     margin: auto;
     padding: 8px 16px;
     border-radius: 6px;
@@ -35,7 +39,7 @@ h2 {
 }
 
 button {
-    background-color: #673ab7;
+    background-color: #8bc34a;
     color: white;
     padding: 8px 12px;
     border-radius: 6px;
@@ -43,22 +47,34 @@ button {
 }
 
 button:hover {
-    background-color: #8056c9;
+    background-color: #a4d967;
 }
 
 input, select {
-    border: 1px solid;
+    border: 1px solid black;
     padding: 8px 12px;
     border-radius: 5px;
     margin-top: 3px;
 }
 
-img{
+img {
     width: 100%;
 }
 
 p {
     margin: 8px 0;
+}
+
+.alert {
+    padding: 8px 12px;
+    margin: 0 -16px;
+    text-align: center;
+    border: 1px dashed;
+    border-right: 0;
+    border-left: 0;
+    font-size: 20px;
+    color: gray;
+    margin-bottom: 12px;
 }
 
 #board {
