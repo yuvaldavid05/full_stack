@@ -1,17 +1,24 @@
-function Range(){
+import { useState } from "react";
+import './Range.css';
 
-    const value = props.value;
-    // const min = props.min;
-    // const max = props.max;
+function Range({ title, min, max, value, change}){
+    const [num, setNum] = useState(value);
+    
+    function changeVal(val){
+        setNum(val);
 
-    function something(){
-        if(props.change){
-            props.change(value);
+        if(typeof change == 'function'){
+            change(val);
         }
     }
 
     return (
-       
+       <div className="range">
+        <b>{title ? (<b>{title}</b>) : ' '}:</b>
+        <input type="range"  min={min} max={max} value={num} onChange={ev => changeVal(ev.target.value)} />
+        <input type="number"  min={min} max={max} value={num} onChange={ev => changeVal(ev.target.value)} />
+
+       </div>
     )
 }
 

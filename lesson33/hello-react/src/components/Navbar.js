@@ -1,6 +1,6 @@
 import './Navbar.css';
 
-function Navbar(){
+function Navbar() {
     return (
         <nav>
             <ul>
