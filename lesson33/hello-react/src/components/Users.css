@@ -1,0 +1,74 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+tr {
+    background-color: white;
+}
+
+thead tr {
+    background-color: #3dbf23;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #d9d9d9;
+}
+
+th,
+td {
+    padding: 6px;
+    text-align: center;
+}
+
+.remove,
+.save {
+    margin: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.remove:hover,
+.save:hover {
+    scale: 1.5;
+}
+
+.remove {
+    background: none;
+}
+
+.save {
+    background: none;
+    visibility: hidden;
+}
+
+.noData {
+    font-size: 2em;
+    color: gray;
+    text-align: center;
+}
+
+.cardFrame {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.cardFrame .card {
+    background: white;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px #00000036;
+    margin: 0;
+}
+
+.cardFrame .card p {
+    margin: 0;
+}
+
+button.active {
+    background-color: #3dbf23;
+}
