@@ -2,6 +2,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import Products from './components/Products';
 import Login from './components/Login';
+import Logout from './components/Logout';
 
 function App() {
     const [user, setUser] = useState();
@@ -13,7 +14,7 @@ function App() {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.status == 'success') {
+                if (data.status === 'success') {
                     setUser(data.user);
                     setIsLogged(true);
                 } else {
@@ -25,12 +26,16 @@ function App() {
 
     return (
         <div className="App">
+
             <h1>ניהול מוצרים</h1>
 
             <div className="frame">
                 {
                     isLogged ?
-                        <p className='user'>{user.fullName} מחובר!</p> :
+                        <p className='user'>
+                            {user.fullName} מחובר!
+                            <Logout onLogout={() => { setUser(); setIsLogged(false) }} />
+                        </p> :
                         ''
                 }
                 {

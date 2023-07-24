@@ -71,3 +71,89 @@ input.fieldError, textarea.fieldError {
 .user {
   margin: 0;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 6px #979797;
+}
+
+.grid div {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #282c34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.grid div:nth-last-child(-n +5) {
+  border-bottom: none;
+}
+
+.grid div:nth-child(10n+1),
+.grid div:nth-child(10n+2),
+.grid div:nth-child(10n+3),
+.grid div:nth-child(10n+4),
+.grid div:nth-child(10n+5) {
+  background-color: #dcdcdc;
+}
+
+.grid div:nth-child(-n +5) {
+  background-color: #61dafb;
+  font-weight: bold;
+}
+
+.remove,
+.save {
+  margin: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.remove:hover,
+.save:hover {
+  scale: 1.5;
+}
+
+.remove {
+  background: none;
+}
+
+button.logout {
+  display: inline;
+  width: initial;
+  margin: 0 3px;
+  font-size: 12px;
+  padding: 4px 8px;
+  background-color: gray;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button.logout:hover {
+  background-color: red;
+}
+
+button.logout:active {
+  scale: 1.2;
+}
+
+.signup {
+  cursor: pointer;
+  text-align: center;
+}
+
+.signup:hover {
+  text-decoration: underline;
+}
+
+.noData {
+  color: gray;
+  font-size: 3em;
+  margin: 0.2em;
+  font-weight: normal;
+}

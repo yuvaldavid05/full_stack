@@ -14,7 +14,7 @@ small {
 }
 
 .ex1 {
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto;   
 }
 
 .ex2 {
