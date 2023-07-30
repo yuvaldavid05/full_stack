@@ -1,22 +1,26 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { JOI_HEBREW } from './joi-hebrew';
 import Joi from "joi";
 
-export default function AddProduct({ addedProduct }) {
+export default function EditProduct({ item, itemChange }) {
     const [formData, setFormData] = useState({
         name: '',
         price: 0,
-        discount: null,
+        discount: 0,
     });
     const [errors, setErrors] = useState({});
-    const [isValid, setIsValid] = useState(false);
-    const [isModal, setIsModal] = useState(false);
 
     const productSchema = Joi.object({
         name: Joi.string().min(3).required(),
         price: Joi.number().required(),
         discount: Joi.number().required(),
     });
+
+    useEffect(() => {
+        if (item) {
+            setFormData(item);
+        }
+    }, [item]);
 
     const handleInputChange = (ev) => {
         const { id, value } = ev.target;
@@ -35,70 +39,62 @@ export default function AddProduct({ addedProduct }) {
             if (error) {
                 err[id] = error.message;
             }
-
-            setIsValid(false);
-        } else {
-            setIsValid(true);
         }
 
         setFormData(obj);
         setErrors(err);
     };
 
-    function add(ev) {
+    function save(ev) {
         ev.preventDefault();
 
         fetch("https://api.shipap.co.il/products", {
             credentials: 'include',
-            method: "POST",
+            method: "PUT",
             headers: {
                 'Content-type': 'application/json'
             },
             body: JSON.stringify(formData),
         })
-            .then(res => res.json())
-            .then(item => {
-                addedProduct(item);
-                setIsModal(false);
+            .then(() => {
+                itemChange(formData);
             });
     }
 
     return (
         <>
-            <button style={{ width: 'initial' }} onClick={() => setIsModal(true)}>+ מוצר חדש</button>
-
             {
-                isModal ?
+                item ?
                     <div className="modal-frame">
                         <div className="modal">
                             <header>
-                                <button className="close" onClick={() => setIsModal(false)}>x</button>
-                                <h2>מוצר חדש</h2>
+                                <button className="close" onClick={() => itemChange()}>x</button>
+                                <h2>עריכת מוצר</h2>
                             </header>
 
-                            <form onSubmit={add}>
+                            <form onSubmit={save}>
                                 <label>
                                     שם המוצר:
-                                    <input type="text" id='name' className={errors.name ? 'fieldError' : ''} onChange={handleInputChange} />
+                                    <input type="text" value={formData.name} id='name' className={errors.name ? 'fieldError' : ''} onChange={handleInputChange} />
                                 </label>
 
                                 {errors.name ? <div className='fieldError'>{errors.name}</div> : ''}
 
                                 <label>
                                     מחיר:
-                                    <input type="number" id='price' className={errors.price ? 'fieldError' : ''} onChange={handleInputChange} />
+                                    <input type="number" value={formData.price} id='price' className={errors.price ? 'fieldError' : ''} onChange={handleInputChange} />
                                 </label>
 
                                 {errors.price ? <div className='fieldError'>{errors.price}</div> : ''}
 
                                 <label>
                                     הנחה:
-                                    <input type="number" id='discount' className={errors.discount ? 'fieldError' : ''} onChange={handleInputChange} />
+                                    <input type="number" value={formData.discount} id='discount' className={errors.discount ? 'fieldError' : ''} onChange={handleInputChange} />
                                 </label>
 
                                 {errors.discount ? <div className='fieldError'>{errors.discount}</div> : ''}
 
-                                <button disabled={!isValid}>הוסף</button>
+                                <button>שמור</button>
                             </form>
                         </div>
                     </div> :
