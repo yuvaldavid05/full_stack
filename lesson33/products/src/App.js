@@ -9,25 +9,34 @@ export const UserContext = React.createContext();
 function App() {
     const [user, setUser] = useState();
     const [isLogged, setIsLogged] = useState();
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         fetch("https://api.shipap.co.il/login", {
             credentials: 'include',
         })
-            .then(res => res.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    setUser(data.user);
-                    setIsLogged(true);
+            .then(res => {
+                if (res.ok) {
+                    return res.json();
                 } else {
-                    setUser();
-                    setIsLogged(false);
+                    return res.text().then(x => {
+                        throw new Error(x);
+                    });
                 }
+            })
+            .then(data => {
+                setUser(data);
+            })
+            .catch(err => {
+                setUser();
+            })
+            .finally(() => {
+                setLoading(false);
             });
     }, []);
 
     return (
-        <UserContext.Provider value={{ user, setUser, isLogged, setIsLogged }}>
+        <UserContext.Provider value={{ user, setUser, isLogged, setIsLogged, setLoading }}>
             <div className="App">
                 <h1>ניהול מוצרים</h1>
 

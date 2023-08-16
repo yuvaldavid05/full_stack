@@ -11,7 +11,7 @@ export default function Login() {
     const [errors, setErrors] = useState({});
     const [isValid, setIsValid] = useState(false);
     const [isSignupState, setIsSignup] = useState(false);
-    const { setUser, setIsLogged } = useContext(UserContext);
+    const { setUser, setIsLogged, setLoading } = useContext(UserContext);
 
     const loginSchema = Joi.object({
         userName: Joi.string().min(3).max(10).required(),
@@ -29,14 +29,23 @@ export default function Login() {
             },
             body: JSON.stringify({ userName, password }),
         })
-            .then(res => res.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    setUser(data.user);
-                    setIsLogged(true);
+            .then(res => {
+                if (res.ok) {
+                    return res.json();
                 } else {
-                    setLoginError(data.message);
+                    return res.text().then(x => {
+                        throw new Error(x);
+                    });
                 }
+            })
+            .then(data => {
+                setUser(data);
+            })
+            .catch(err => {
+                setLoginError(err.message);
+            })
+            .finally(() => {
+                setLoading(false);
             });
     }
 

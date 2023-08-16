@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import { JOI_HEBREW } from './joi-hebrew';
 import Joi from 'joi';
+import { useContext } from 'react';
+import { UserContext } from '../App';
+
 
 export default function Signup({ onSignup }) {
     const [formData, setFormData] = useState({
@@ -13,6 +16,8 @@ export default function Signup({ onSignup }) {
     const [loginError, setLoginError] = useState('');
     const [errors, setErrors] = useState({});
     const [isValid, setIsValid] = useState(false);
+    const { setLoading } = useContext(UserContext);
+
 
     const loginSchema = Joi.object({
         userName: Joi.string().min(3).max(10).required(),
@@ -61,11 +66,13 @@ export default function Signup({ onSignup }) {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.status === 'success') {
-                    onSignup(data.user);
-                } else {
-                    setLoginError(data.message);
-                }
+                onSignup(data);
+            })
+            .catch(err => {
+                setLoginError(err.message);
+            })
+            .finally(() => {
+                setLoading(false);
             });
     }
 
