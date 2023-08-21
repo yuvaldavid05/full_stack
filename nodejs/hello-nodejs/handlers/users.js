@@ -11,7 +11,7 @@ function getUsers(req, res) {
 }
 
 function getUser(req, res) {
-    connection.query("SELECT * FROM `users` WHERE `id` = ? ", [req.params.id], (err, result) => {
+    connection.query("SELECT * FROM `users` WHERE `id` = ?", [req.params.id], (err, result) => {
         if (err) {
             throw err;
         }
@@ -22,4 +22,3 @@ function getUser(req, res) {
 
 exports.getUsers = getUsers;
 exports.getUser = getUser;
-
