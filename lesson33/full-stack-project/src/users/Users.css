@@ -21,6 +21,7 @@ th,
 td {
     padding: 6px;
     text-align: center;
+    white-space: nowrap;
 }
 
 td button {
@@ -64,10 +65,11 @@ tr td:last-child {
 }
 
 button.returnLink {
-    margin: 10px 0 0 0;
+    margin: 10px 0 0 10px;
     width: initial;
     font-size: 1em;
     background: #282c34;
+    display: inline;
 }
 
 button.returnLink svg {
@@ -93,10 +95,30 @@ button.returnLink svg {
     scale: 1.5;
 }
 
+.like i, .dislike i {
+    display: inline-block;
+    min-width: 30px;
+    text-align: right;
+    padding: 0 8px;
+    font-family: ui-serif !important;
+    font-style: normal;
+}
+
 .like {
     color: #3dbf23;
 }
 
 .dislike {
     color: #bf2323;
+}
+
+
+.arrows {
+    text-align: left;
+}
+
+.arrows button {
+    display: inline-block;
+    width: initial;
+    margin: 3px;
 }
