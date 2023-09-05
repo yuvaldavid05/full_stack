@@ -47,13 +47,13 @@ app.get('/clients', (req, res) => {
 
 app.get('/table/:tableName', (req, res) => {
 
-    let sql = `SELECT * FROM (${req.params.tableName})`
+    let sql = `SELECT * FROM (${req.params.tableName})`;
 
     if (req.query.limit) {
-        sql += `LIMIT ${+req.query.limit}`
+        sql += ` LIMIT ${+req.query.limit}`;
     }
 
-    con.query(`SELECT * FROM ${req.params.tableName}`, (err, result) => {
+    con.query(sql, (err, result) => {
         if (err) {
             throw err;
         }
@@ -66,7 +66,6 @@ app.get('/table/:tableName', (req, res) => {
         }
 
         const keys = Object.keys(result[0]);
-
 
         res.end(`
             <!DOCTYPE html>
@@ -85,17 +84,15 @@ app.get('/table/:tableName', (req, res) => {
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                           ${keys.map(k => `<th>${k}</th>`).join('')}
+                                ${keys.map(k => `<th>${k}</th>`).join('')}
                             </tr>
                         </thead>
-
                         <tbody>
                             ${result.map(item => `
                                 <tr>
-                                ${Object.values(item).map(v => `<td>${v instanceof Date ? moment(v).format('DD/MM/YYYY') : v}</td>`).join('')}
+                                    ${Object.values(item).map(v => `<td>${v instanceof Date ? moment(v).format('DD/MM/YYYY') : v}</td>`).join('')}
                                 </tr>
                             `).join('')}
-                            
                         </tbody>
                     </table>
                 </body>
@@ -104,22 +101,16 @@ app.get('/table/:tableName', (req, res) => {
     })
 });
 
-app.get('/users', (req, res) => {
+app.get('/login', (req, res) => {
     if (!req.query.userName || !req.query.password) {
         return res.send("שגיאה");
     }
 
-
-    con.query(`SELECT * FROM users WHERE userName= ? AND password = MD5(?)`, [req.query.userName, req.query.password], (err, result) => {
-        if (err) {
-            throw err;
-        }
-
+    con.query("SELECT * FROM `users` WHERE `userName` = ? AND `password` = MD5(?)", [req.query.userName, req.query.password], (err, result) => {
         if (!result.length) {
-            return res.send("אין יוזר");
+            return res.send("שם משתמש או סיסמה לא נכונים");
         } else {
             return res.send(result[0]);
         }
-    })
-
+    });
 });
