@@ -20,7 +20,7 @@ function App() {
         <GeneralContext.Provider value={{ setLoading, snackbar }}>
             {
                 <div className="App">
-                    <h1>פרוייקט Full Stack</h1>
+                    <h1>פרוייקט Full Stack - MongoDB</h1>
 
                     <div className="frame">
                         <Navbar />

@@ -26,44 +26,44 @@ export default function Dashboard() {
     ];
 
     useEffect(() => {
-        const url = 'http://localhost:4000/dashboard';
+        // const url = 'http://localhost:4444/dashboard';
 
-        Promise.all([
-            fetch(`${url}/grades/average`).then(res => res.json()),
-            fetch(`${url}/grades/amount`).then(res => res.json()),
-            fetch(`${url}/grades/dev`).then(res => res.json()),
-            fetch(`${url}/grades/max`).then(res => res.json()),
-            fetch(`${url}/grades/min`).then(res => res.json()),
-            fetch(`${url}/users/amount`).then(res => res.json()),
-            fetch(`${url}/users/amount-year`).then(res => res.json()),
-            fetch(`${url}/users/amount-by-year`).then(res => res.json()),
-            fetch(`${url}/users/last/10`).then(res => res.json()),
-        ]).then(data => {
-            const [
-                averageGrade,
-                gradesAmount,
-                gradesDev,
-                maxGrade,
-                minGrade,
-                usersAmount,
-                usersAmountCurrentYear,
-                usersAmountByYear,
-                last10Users
-            ] = data;
+        // Promise.all([
+        //     fetch(`${url}/grades/average`).then(res => res.json()),
+        //     fetch(`${url}/grades/amount`).then(res => res.json()),
+        //     fetch(`${url}/grades/dev`).then(res => res.json()),
+        //     fetch(`${url}/grades/max`).then(res => res.json()),
+        //     fetch(`${url}/grades/min`).then(res => res.json()),
+        //     fetch(`${url}/users/amount`).then(res => res.json()),
+        //     fetch(`${url}/users/amount-year`).then(res => res.json()),
+        //     fetch(`${url}/users/amount-by-year`).then(res => res.json()),
+        //     fetch(`${url}/users/last/10`).then(res => res.json()),
+        // ]).then(data => {
+        //     const [
+        //         averageGrade,
+        //         gradesAmount,
+        //         gradesDev,
+        //         maxGrade,
+        //         minGrade,
+        //         usersAmount,
+        //         usersAmountCurrentYear,
+        //         usersAmountByYear,
+        //         last10Users
+        //     ] = data;
 
-            setDashboard({
-                averageGrade: averageGrade.res,
-                gradesAmount: gradesAmount.res,
-                gradesDev: gradesDev.res,
-                maxGrade: maxGrade.res,
-                minGrade: minGrade.res,
-                usersAmount: usersAmount.res,
-                usersAmountCurrentYear: usersAmountCurrentYear.res,
-            });
+        //     setDashboard({
+        //         averageGrade: averageGrade.res,
+        //         gradesAmount: gradesAmount.res,
+        //         gradesDev: gradesDev.res,
+        //         maxGrade: maxGrade.res,
+        //         minGrade: minGrade.res,
+        //         usersAmount: usersAmount.res,
+        //         usersAmountCurrentYear: usersAmountCurrentYear.res,
+        //     });
 
-            setLastUsers(last10Users);
-            setUsersAmountByYear(usersAmountByYear);
-        });
+        //     setLastUsers(last10Users);
+        //     setUsersAmountByYear(usersAmountByYear);
+        // });
     }, []);
 
     return (
