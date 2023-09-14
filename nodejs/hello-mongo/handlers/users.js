@@ -1,5 +1,4 @@
 module.exports = (app, mongoose) => {
-
     const schema = new mongoose.Schema({
         firstName: String,
         lastName: String,
@@ -8,10 +7,6 @@ module.exports = (app, mongoose) => {
     });
 
     const User = mongoose.model("users", schema);
-
-    app.get('/', (req, res) => {
-        res.send("Welcome");
-    });
 
     app.get('/users', async (req, res) => {
         res.send(await User.find());
