@@ -11,7 +11,11 @@ export default function Users() {
     const [page, setPage] = useState(1);
 
     async function getUsers() {
-        const res = await fetch("http://localhost:4444/users");
+        const res = await fetch("http://localhost:4444/users", {
+            headers: {
+                'Authorization': localStorage.token
+            },
+        });
         const data = await res.json();
         setUsers(data);
     }
@@ -26,6 +30,9 @@ export default function Users() {
 
         fetch(`http://localhost:4444/users/${user._id}/like`, {
             method: 'POST',
+            headers: {
+                'Authorization': localStorage.token
+            },
         });
     }
 
@@ -35,6 +42,9 @@ export default function Users() {
 
         fetch(`http://localhost:4444/users/${user._id}/dislike`, {
             method: 'POST',
+            headers: {
+                'Authorization': localStorage.token
+            },
         });
     }
 
@@ -45,16 +55,19 @@ export default function Users() {
 
         fetch(`http://localhost:4444/users/${_id}`, {
             method: 'DELETE',
+            headers: {
+                'Authorization': localStorage.token
+            },
         })
-            .then(() => {
-                setUsers(users.filter(x => x._id !== _id));
-            });
+        .then(() => {
+            setUsers(users.filter(x => x._id !== _id));
+        });
     }
 
     const next = () => {
         setPage(page + 1);
     }
-
+    
     const prev = () => {
         setPage(page - 1);
     }
@@ -82,7 +95,7 @@ export default function Users() {
                 {users.length >= 100 && <option>100</option>}
             </select>
 
-
+            
             <div className='arrows'>
                 <button disabled={page >= Math.ceil(users.length / limit)} onClick={end}><AiOutlineDoubleRight /></button>
                 <button disabled={page >= Math.ceil(users.length / limit)} onClick={next}><AiOutlineRight /></button>
@@ -104,31 +117,31 @@ export default function Users() {
                     </tr>
                 </thead>
                 <tbody>
-                    {
-                        users.slice((page - 1) * limit, limit * page).map((u, i) =>
-                            <tr key={u._id}>
-                                <td>{(page - 1) * limit + i + 1}</td>
-                                <td>{moment(u.createdTime).format("DD/MM/YY")}</td>
-                                <td>{u.firstName}</td>
-                                <td>{u.lastName}</td>
-                                <td>{u.email}</td>
-                                <td>{u.phone}</td>
-                                <td onMouseDown={ev => ev.preventDefault()}>
-                                    <span className='like'>
-                                        <AiFillLike onClick={() => like(u)} />
-                                        <i> {u.likes || 0}</i>
-                                    </span>
-                                    <span className='dislike'>
-                                        <AiFillDislike onClick={() => dislike(u)} />
-                                        <i> {u.dislikes || 0}</i>
-                                    </span>
+                {
+                    users.slice((page - 1) * limit, limit * page).map((u, i) => 
+                        <tr key={u._id}>
+                            <td>{(page - 1) * limit + i + 1}</td>
+                            <td>{moment(u.createdTime).format("DD/MM/YY")}</td>
+                            <td>{u.firstName}</td>
+                            <td>{u.lastName}</td>
+                            <td>{u.email}</td>
+                            <td>{u.phone}</td>
+                            <td onMouseDown={ev => ev.preventDefault()}>
+                                <span className='like'>
+                                    <AiFillLike onClick={() => like(u)} />
+                                    <i> {u.likes || 0}</i>
+                                </span> 
+                                <span className='dislike'>
+                                    <AiFillDislike onClick={() => dislike(u)} />
+                                    <i> {u.dislikes || 0}</i>
+                                </span>
 
-                                    <Link to={`/users/${u._id}`}><button className='green'><AiFillEdit /></button></Link>
-                                    <button className='red' onClick={() => remove(u._id)}><BsFillTrash3Fill /></button>
-                                </td>
-                            </tr>
-                        )
-                    }
+                                <Link to={`/users/${u._id}`}><button className='green'><AiFillEdit /></button></Link>
+                                <button className='red' onClick={() => remove(u._id)}><BsFillTrash3Fill /></button>
+                            </td>
+                        </tr>
+                    )
+                }
                 </tbody>
             </table>
         </div>

@@ -15,7 +15,11 @@ export default function UsersEdit() {
     ];
 
     async function getUser() {
-        const res = await fetch(`http://localhost:4444/users/${userId}`);
+        const res = await fetch(`http://localhost:4444/users/${userId}`, {
+            headers: {
+                'Authorization': localStorage.token
+            },
+        });
         const data = await res.json();
         setUser(data);
     }
@@ -32,7 +36,7 @@ export default function UsersEdit() {
             getUser();
         }
     }, [userId]);
-
+    
     const handleInput = ev => {
         const { name, value } = ev.target;
 
@@ -47,12 +51,15 @@ export default function UsersEdit() {
 
         fetch("http://localhost:4444/users" + (user._id ? `/${user._id}` : ""), {
             method: user._id ? 'PUT' : 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': localStorage.token
+            },
             body: JSON.stringify(user)
         })
-            .then(() => {
-                navigate('/users');
-            });
+        .then(() => {
+            navigate('/users');
+        });
     }
 
     return (

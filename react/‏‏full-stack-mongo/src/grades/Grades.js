@@ -29,9 +29,9 @@ export default function Grades() {
         fetch(`http://localhost:4444/grades/${id}`, {
             method: 'DELETE',
         })
-            .then(() => {
-                setGrades(grades.filter(x => x._id !== id));
-            });
+        .then(() => {
+            setGrades(grades.filter(x => x._id !== id));
+        });
     }
 
     const handleInput = ev => {
@@ -42,22 +42,22 @@ export default function Grades() {
             [name]: value,
         });
     }
-
+    
     const addGrade = () => {
         fetch("http://localhost:4444/grades", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
         })
-            .then(res => res.json())
-            .then(g => {
-                setGrades([...grades, g]);
-                setFormData({
-                    date: moment().format('YYYY-MM-DD'),
-                    title: '',
-                    grade: '',
-                });
+        .then(res => res.json())
+        .then(g => {
+            setGrades([...grades, g]);
+            setFormData({
+                date: moment().format('YYYY-MM-DD'),
+                title: '',
+                grade: '',
             });
+        });
     }
 
     return (
@@ -82,19 +82,19 @@ export default function Grades() {
                         <td><input type="number" name="grade" value={formData.grade} onChange={handleInput} /></td>
                         <td><button onClick={addGrade}>הוסף</button></td>
                     </tr>
-                    {
-                        grades.map((g, i) =>
-                            <tr key={g._id}>
-                                <td>{i + 1}</td>
-                                <td>{moment(g.date).format("DD/MM/YY")}</td>
-                                <td>{g.title}</td>
-                                <td>{g.grade}</td>
-                                <td>
-                                    <button className='red' onClick={() => remove(g._id)}><BsFillTrash3Fill /></button>
-                                </td>
-                            </tr>
-                        )
-                    }
+                {
+                    grades.map((g, i) => 
+                        <tr key={g._id}>
+                            <td>{i + 1}</td>
+                            <td>{moment(g.date).format("DD/MM/YY")}</td>
+                            <td>{g.title}</td>
+                            <td>{g.grade}</td>
+                            <td>
+                                <button className='red' onClick={() => remove(g._id)}><BsFillTrash3Fill /></button>
+                            </td>
+                        </tr>
+                    )
+                }
                 </tbody>
             </table>
         </div>

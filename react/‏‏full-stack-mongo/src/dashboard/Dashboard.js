@@ -95,17 +95,17 @@ export default function Dashboard() {
                     <header>כמות משתמשים לפי שנים</header>
 
                     <div>
-                        <Doughnut data={{
-                            labels: usersAmountByYear.map(x => x.year),
-                            datasets: [
-                                {
-                                    data: usersAmountByYear.map(x => x.amount),
-                                    backgroundColor: usersAmountByYear.map((x, i) => `hsl(${150 + i * 60} 82% 56%)`),
-                                    // borderColor: usersAmountByYear.map((x, i) => `hsl(${150 + i * 60} 82% 56%)`),
-                                    // borderWidth: 1,
-                                },
-                            ],
-                        }} />
+                    <Doughnut data={{
+                        labels: usersAmountByYear.map(x => x.year),
+                        datasets: [
+                            {
+                                data: usersAmountByYear.map(x => x.amount),
+                                backgroundColor: usersAmountByYear.map((x, i) => `hsl(${150 + i * 60} 82% 56%)`),
+                                // borderColor: usersAmountByYear.map((x, i) => `hsl(${150 + i * 60} 82% 56%)`),
+                                // borderWidth: 1,
+                            },
+                        ],
+                    }} />
                     </div>
                 </div>
             }

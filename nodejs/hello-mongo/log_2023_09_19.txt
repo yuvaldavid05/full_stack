@@ -1,0 +1,53 @@
+Time: 19/09/2023 16:02:49
+Method: POST
+Route: /login
+
+Time: 19/09/2023 16:02:50
+Method: GET
+Route: /users
+
+Time: 19/09/2023 16:02:50
+Method: GET
+Route: /grades
+
+Time: 19/09/2023 16:02:56
+Method: GET
+Route: /users
+
+Time: 19/09/2023 16:05:39
+Method: GET
+Route: /login
+User: 65095c425ce2b0f9f7d823c1 (y d)
+
+Time: 19/09/2023 16:05:39
+Method: GET
+Route: /users
+
+Time: 19/09/2023 16:05:50
+Method: POST
+Route: /login
+
+Time: 19/09/2023 16:05:51
+Method: GET
+Route: /users
+
+Time: 19/09/2023 16:05:52
+Method: GET
+Route: /grades
+
+Time: 19/09/2023 16:05:53
+Method: GET
+Route: /users
+
+Time: 19/09/2023 16:05:55
+Method: GET
+Route: /users
+
+Time: 19/09/2023 16:06:46
+Method: GET
+Route: /grades
+
+Time: 19/09/2023 16:06:47
+Method: GET
+Route: /users
+

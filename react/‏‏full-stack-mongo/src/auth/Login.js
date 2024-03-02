@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import './User.css';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { GeneralContext } from '../App';
 
 export default function Login() {
     const [formData, setFormData] = useState({
@@ -8,10 +9,12 @@ export default function Login() {
         password: '',
     });
     const [loginError, setLoginError] = useState('');
+    const { setLoading, snackbar, setUser, user } = useContext(GeneralContext);
 
     const login = ev => {
         ev.preventDefault();
-
+        setLoading(true);
+        
         fetch("http://localhost:4444/login", {
             credentials: 'include',
             method: "POST",
@@ -20,24 +23,25 @@ export default function Login() {
             },
             body: JSON.stringify(formData),
         })
-            .then(res => {
-                if (res.ok) {
-                    return res.json();
-                } else {
-                    return res.text().then(x => {
-                        throw new Error(x);
-                    });
-                }
-            })
-            .then(data => {
-                localStorage.token = data.token;
-            })
-            .catch(err => {
-                setLoginError(err.message);
-            })
-            .finally(() => {
-
-            });
+        .then(res => {
+            if (res.ok) {
+                return res.json();
+            } else {
+                return res.text().then(x => {
+                    throw new Error(x);
+                });
+            }
+        })
+        .then(data => {
+            setUser(data);
+            localStorage.token = data.token;
+        })
+        .catch(err => {
+            setLoginError(err.message);
+        })
+        .finally(() => {
+            setLoading(false);
+        });
     }
 
     const handleError = ev => {
@@ -55,7 +59,7 @@ export default function Login() {
         <>
             <div className="Login smallFrame">
                 <h2>התחברות</h2>
-
+                
                 <form onSubmit={login}>
                     <label>
                         אימייל:
@@ -69,7 +73,7 @@ export default function Login() {
 
                     <button>התחבר</button>
 
-                    {loginError ? <div className='fieldError'>{loginError}</div> : ''}
+                    { loginError ? <div className='fieldError'>{loginError}</div> : '' }
                 </form>
             </div>
 

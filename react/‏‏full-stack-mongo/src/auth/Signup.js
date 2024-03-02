@@ -15,7 +15,7 @@ export default function Signup() {
 
     const signup = ev => {
         ev.preventDefault();
-
+        
         fetch("http://localhost:4444/signup", {
             credentials: 'include',
             method: "POST",
@@ -24,24 +24,24 @@ export default function Signup() {
             },
             body: JSON.stringify(formData),
         })
-            .then(res => {
-                if (res.ok) {
-                    return res.json();
-                } else {
-                    return res.text().then(x => {
-                        throw new Error(x);
-                    });
-                }
-            })
-            .then(data => {
-                navigate('/login');
-            })
-            .catch(err => {
-                setLoginError(err.message);
-            })
-            .finally(() => {
+        .then(res => {
+            if (res.ok) {
+                return res.json();
+            } else {
+                return res.text().then(x => {
+                    throw new Error(x);
+                });
+            }
+        })
+        .then(data => {
+            navigate('/');
+        })
+        .catch(err => {
+            setLoginError(err.message);
+        })
+        .finally(() => {
 
-            });
+        });
     }
 
     const handleError = ev => {
@@ -88,12 +88,12 @@ export default function Signup() {
 
                     <button>הרשם</button>
 
-                    {loginError ? <div className='fieldError'>{loginError}</div> : ''}
+                    { loginError ? <div className='fieldError'>{loginError}</div> : '' }
                 </form>
             </div>
 
             <p className="signup">
-                <Link to="/signup">להרשמה לחץ כאן</Link>
+                <Link to="/">להתחברות לחץ כאן</Link>
             </p>
         </>
     )
