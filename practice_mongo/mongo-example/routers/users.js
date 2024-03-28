@@ -52,6 +52,7 @@ router.post("/", async (req, res) => {
     res.send(newUser);
 })
 
+//  עדכון פרטים משתמש קיים (לא בדקתי אם עובד) 
 router.put("/:id", async (req, res) => {
     const { firstName, lastName, email, phone } = req.body;
     const user = await UserModel.findOne({ _id: req.params.id });
@@ -60,6 +61,7 @@ router.put("/:id", async (req, res) => {
         return res.status(403).send("המשתמש לא קיים");
     }
 
+    // בדיקת וליצדיה
     // let validBody = validUser(req.body);
     // if (validBody.error) {
     //     return res.status(400).json(validBody.error.details);
@@ -73,10 +75,10 @@ router.put("/:id", async (req, res) => {
     res.send(user);
 })
 
-router.put("/:id", async (req, res) => {
+// מחיקת משתמש אחד לפי ID
+router.delete("/:id", async (req, res) => {
     await User.deleteOne({ _id: req.params.id });
     res.send();
-
 })
 
 module.exports = router;
