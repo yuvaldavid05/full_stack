@@ -14,5 +14,8 @@ npm i -g nodemon -D
 // הכל ביחד
 npm install express mysql2 cors moment fs --save
 
+// התקנה למונגו
+npm install express cors moment fs --save
+
 //התקנה של מונגו 
 npm i mongoose
