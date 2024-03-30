@@ -1,10 +1,13 @@
 const express = require("express");
 const cors = require('cors');
+const morgan = require('morgan');
 require("./db/mongoConnect");
 
 
 const { routeInit } = require("./routers/confing_route")
 const app = express();
+
+app.use(morgan("dev"));
 
 app.use(express.json());
 

@@ -11,6 +11,7 @@ router.get("/:id", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
+    // לבדוק אם הולידציה חיונית,מתאימה
     let validBody = validGrade(req.body);
     if (validBody.error) {
         return res.status(400).json(validBody.error.details);
