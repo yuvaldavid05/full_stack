@@ -20,3 +20,9 @@ app.use(cors({
 
 routeInit(app);
 app.listen(1111);
+
+// const server = http.createServer(app);
+// בודק באיזה פורט להריץ את השרת, אם בשרת אמיתי אוסף
+// את המשתנה פורט מהסביבת עבודה שלו ואם לא 3001 (במקרה זה)
+// const port = process.env.PORT || 3001;
+// server.listen(port);

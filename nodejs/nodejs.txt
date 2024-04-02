@@ -19,3 +19,6 @@ npm install express cors moment fs --save
 
 //התקנה של מונגו 
 npm i mongoose
+
+//התקנה של נודמון 
+npm i nodemon
